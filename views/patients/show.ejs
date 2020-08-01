@@ -1,0 +1,10 @@
+<h2 class="page-header"><%= patient.name %></h2>
+<div class="btn-row">
+  <a class="btn btn-primary" href="/patients/<%= patient.id %>/edit">Edit</a>
+  <%- include('../partials/deleteForm',
+              { url: `/patients/${patient.id}` }) %>
+</div>
+<% if (prescriptionsByPatient.length > 0) { %>
+  <h2 class="page-header">Patients prescriptions</h2>
+  <%- include('../partials/prescriptionGrid', { prescriptions: prescriptionsByPatient }) %>
+<% } %>

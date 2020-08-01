@@ -1,0 +1,41 @@
+<div class="form-row">
+  <div class="form-item">
+    <label>Diagnosis</label>
+    <input type="text" name="title" value="<%= prescription.title %>">
+  </div>
+  <div class="form-item">
+    <label>Patient</label>
+    <select name="patient">
+      <% patients.forEach(patient => { %>
+        <% if (patient.id === prescription.patient) { %>
+          <option selected label="<%= patient.name %>" value="<%= patient.id %>">
+        <% } else { %>
+          <option label="<%= patient.name %>" value="<%= patient.id %>">
+        <% } %>
+      <% }) %>
+    </select>
+  </div>
+</div>
+
+<div class="form-row">
+  <div class="form-item">
+    <label>Date</label>
+    <input type="date" name="publishDate"
+          value="<%= prescription.publishDate == null ? '' : prescription.publishDate.toISOString().split('T')[0] %>">
+  </div>
+  <div class="form-item">
+    <label>Age</label>
+    <input type="number" name="pageCount" min="1" value="<%= prescription.pageCount %>">
+  </div>
+</div>
+
+<div class="form-row">
+  <div class="form-item form-item-no-grow">
+    <label>Cover</label>
+    <input type="file" name="cover" class="prescription-cover filepond">
+  </div>
+  <div class="form-item">
+    <label>Treatment</label>
+    <textarea name="description"><%= prescription.description %></textarea>
+  </div>
+</div>

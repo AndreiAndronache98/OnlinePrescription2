@@ -1,0 +1,24 @@
+<h2 class="page-header">Search for Prescriptions</h2>
+<form action="/prescriptions" method="GET">
+  <div class="form-row">
+    <div class="form-item">
+      <label>Title</label>
+      <input type="text" name="title" value="<%= searchOptions.title %>">
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-item">
+      <label>Made After</label>
+      <input type="date" name="publishedAfter" value="<%= searchOptions.publishedAfter %>">
+    </div>
+    <div class="form-item">
+      <label>Made Before</label>
+      <input type="date" name="publishedBefore" value="<%= searchOptions.publishedBefore %>">
+    </div>
+  </div>
+  <div class="form-row form-row-end">
+    <button class="btn btn-primary" type="submit">Search</button>
+  </div>
+</form>
+<br>
+<%- include('../partials/prescriptionGrid', { prescriptions: prescriptions, large: true }) %>

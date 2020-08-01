@@ -1,0 +1,21 @@
+<h2 class="page-header"><%= prescription.title %></h2>
+<div class="prescription-details">
+  <div>
+    <img class="prescription-cover" src="<%= prescription.coverImagePath %>">
+    <div class="prescription-details-btn-grid">
+      <a class="btn btn-primary" href="/prescriptions/<%= prescription.id %>/edit">Edit</a>
+      <%- include('../partials/deleteForm', { url: `/prescriptions/${prescription.id}` }) %>
+      <a class="btn btn-primary prescription-details-patient-button" href="/patients/<%= prescription.patient.id %>">View Patient</a>
+    </div>
+  </div>
+  <div class="prescription-details-grid">
+    <div class="prescription-details-label">Patient:</div>
+    <div><%= prescription.patient.name %></div>
+    <div class="prescription-details-label">Prescription Date:</div>
+    <div><%= prescription.publishDate.toDateString() %></div>
+    <div class="prescription-details-label">Age:</div>
+    <div><%= prescription.pageCount %></div>
+    <div class="prescription-details-label">Treatment:</div>
+    <div><%= prescription.description %></div>
+  </div>
+</div>

@@ -1,0 +1,9 @@
+.patient-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.patient-name {
+  font-size: 1.5rem;
+}
