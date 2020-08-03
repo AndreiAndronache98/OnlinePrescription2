@@ -1,5 +1,5 @@
-<h2 class="page-header">Search for Prescriptions</h2>
-<form action="/prescriptions" method="GET">
+<h2 class="page-header">Search Book</h2>
+<form action="/books" method="GET">
   <div class="form-row">
     <div class="form-item">
       <label>Title</label>
@@ -8,11 +8,11 @@
   </div>
   <div class="form-row">
     <div class="form-item">
-      <label>Made After</label>
+      <label>Published After</label>
       <input type="date" name="publishedAfter" value="<%= searchOptions.publishedAfter %>">
     </div>
     <div class="form-item">
-      <label>Made Before</label>
+      <label>Published Before</label>
       <input type="date" name="publishedBefore" value="<%= searchOptions.publishedBefore %>">
     </div>
   </div>
@@ -21,4 +21,4 @@
   </div>
 </form>
 <br>
-<%- include('../partials/prescriptionGrid', { prescriptions: prescriptions, large: true }) %>
+<%- include('../partials/bookGrid', { books: books, large: true }) %>

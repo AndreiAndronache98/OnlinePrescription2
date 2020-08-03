@@ -1,9 +1,0 @@
-<% prescriptionCoverClass = locals.large ? 'prescription-cover-large' : '' %>
-<% prescriptionGridClass = locals.large ? 'prescription-grid-large' : '' %>
-<div class="prescription-grid <%= prescriptionGridClass %>">
-  <% prescriptions.forEach(prescription => { %>
-    <a href="/prescriptions/<%= prescription.id %>">
-      <img class="prescription-cover <%= prescriptionCoverClass %>" src="<%= prescription.coverImagePath %>">
-    </a>
-  <% }) %>
-</div>

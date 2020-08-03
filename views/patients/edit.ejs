@@ -1,8 +1,0 @@
-<h2 class="page-header">Edit Patient</h2>
-<form action="/patients/<%= patient.id %>?_method=PUT" method="POST">
-  <%- include('_form_fields') %>
-  <div class="form-row form-row-end btn-row">
-    <a class="btn btn-danger" href="/patients/<%= patient.id %>">Cancel</a>
-    <button class="btn btn-primary" type="submit">Update</button>
-  </div>
-</form>

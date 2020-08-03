@@ -3,8 +3,8 @@
 @import 'shared/header.css';
 @import 'shared/buttons.css';
 @import 'shared/form.css';
-@import 'shared/patient.css';
-@import 'shared/prescriptions.css';
+@import 'shared/author.css';
+@import 'shared/books.css';
 
 :root {
   font-family: 'Gotham Rounded';

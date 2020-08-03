@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const prescriptionSchema = new mongoose.Schema({
+const bookSchema = new mongoose.Schema({
   title: {
     type: String,
     required: true
@@ -29,17 +29,17 @@ const prescriptionSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  patient: {
+  author: {
     type: mongoose.Schema.Types.ObjectId,
     required: true,
-    ref: 'Patient'
+    ref: 'Author'
   }
 })
 
-prescriptionSchema.virtual('coverImagePath').get(function() {
+bookSchema.virtual('coverImagePath').get(function() {
   if (this.coverImage != null && this.coverImageType != null) {
     return `data:${this.coverImageType};charset=utf-8;base64,${this.coverImage.toString('base64')}`
   }
 })
 
-module.exports = mongoose.model('Prescription', prescriptionSchema)
+module.exports = mongoose.model('Book', bookSchema)
