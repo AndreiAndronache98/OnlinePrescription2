@@ -1,6 +1,6 @@
 <div class="form-row">
   <div class="form-item">
-    <label>Title</label>
+    <label>Identifier (Species, Name or Both)</label>
     <input type="text" name="title" value="<%= pet.title %>">
   </div>
   <div class="form-item">
@@ -19,23 +19,23 @@
 
 <div class="form-row">
   <div class="form-item">
-    <label>Publish Date</label>
+    <label>Date</label>
     <input type="date" name="publishDate"
           value="<%= pet.publishDate == null ? '' : pet.publishDate.toISOString().split('T')[0] %>">
   </div>
   <div class="form-item">
-    <label>Page Count</label>
+    <label>Age</label>
     <input type="number" name="pageCount" min="1" value="<%= pet.pageCount %>">
   </div>
 </div>
 
 <div class="form-row">
   <div class="form-item form-item-no-grow">
-    <label>Cover</label>
+    <label>Picture</label>
     <input type="file" name="cover" class="pet-cover filepond">
   </div>
   <div class="form-item">
-    <label>Description</label>
+    <label>Diagnosis and Treatment</label>
     <textarea name="description"><%= pet.description %></textarea>
   </div>
 </div>
