@@ -1,0 +1,10 @@
+<h2 class="page-header"><%= owner.name %></h2>
+<div class="btn-row">
+  <a class="btn btn-primary" href="/owners/<%= owner.id %>/edit">Edit</a>
+  <%- include('../partials/deleteForm',
+              { url: `/owners/${owner.id}` }) %>
+</div>
+<% if (petsByOwner.length > 0) { %>
+  <h2 class="page-header">Pets By Owner</h2>
+  <%- include('../partials/petGrid', { pets: petsByOwner }) %>
+<% } %>

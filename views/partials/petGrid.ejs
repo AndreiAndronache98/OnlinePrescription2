@@ -1,0 +1,9 @@
+<% petCoverClass = locals.large ? 'pet-cover-large' : '' %>
+<% petGridClass = locals.large ? 'pet-grid-large' : '' %>
+<div class="pet-grid <%= petGridClass %>">
+  <% pets.forEach(pet => { %>
+    <a href="/pets/<%= pet.id %>">
+      <img class="pet-cover <%= petCoverClass %>" src="<%= pet.coverImagePath %>">
+    </a>
+  <% }) %>
+</div>

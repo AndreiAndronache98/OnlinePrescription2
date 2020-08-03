@@ -23,9 +23,9 @@
 }
 
 @font-face {
-	font-family: 'Gotham Rounded Book';
-	src: url('/fonts/GothamRounded-Book.woff2') format('woff2'),
-		url('/fonts/GothamRounded-Book.woff') format('woff');
+	font-family: 'Gotham Rounded Pet';
+	src: url('/fonts/GothamRounded-Pet.woff2') format('woff2'),
+		url('/fonts/GothamRounded-Pet.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
 }
