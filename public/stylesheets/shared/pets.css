@@ -1,12 +1,12 @@
 :root {
-  --pet-cover-width: 200px;
-  --pet-cover-width-large: 325px;
-  --pet-cover-aspect-ratio: 0.75;
+  --pet-cover-width: 250px;
+  --pet-cover-width-large: 250x;
+  --pet-cover-aspect-ratio: 1;
 }
 
 .pet-cover {
   width: var(--pet-cover-width);
-  height: calc(var(--pet-cover-width) / var(--pet-cover-aspect-ratio));
+  height: calc(var(--pet-cover-width);
 }
 
 .pet-cover-large {
