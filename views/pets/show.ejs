@@ -1,14 +1,8 @@
-  <style type="text/css" media="print">
-    .NonPrintable
-      display: none;
-    }
-  </style>
 <h2 class="page-header"><%= pet.title %></h2>
 <div class="pet-details">
-
   <div>
     <img class="pet-cover " src="<%= pet.coverImagePath %>">
-    <div class="pet-details-btn-grid NonPrintable">
+    <div class="pet-details-btn-grid noprint">
       <a class="btn btn-primary" href="/pets/<%= pet.id %>/edit">Edit</a>
       <%- include('../partials/deleteForm', { url: `/pets/${pet.id}` }) %>
       <a class="btn btn-primary pet-details-owner-button" href="/owners/<%= pet.owner.id %>">View Owner</a>
