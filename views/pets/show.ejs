@@ -6,7 +6,7 @@
       <a class="btn btn-primary" href="/pets/<%= pet.id %>/edit">Edit</a>
       <%- include('../partials/deleteForm', { url: `/pets/${pet.id}` }) %>
       <a class="btn btn-primary pet-details-owner-button" href="/owners/<%= pet.owner.id %>">View Owner</a>
-		<a href="#" onclick="window.print();return false;">Print this page</a>
+		<a class="btn btn-primary" href="javascript:window.print()">Print</a>
 
     </div>
   </div>
