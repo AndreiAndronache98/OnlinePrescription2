@@ -1,5 +1,13 @@
 <h2 class="page-header"><%= pet.title %></h2>
+<style>
+@media print {
+   .noprint {
+      visibility: hidden;
+   }
+}
+</style>
 <div class="pet-details">
+<div id="noprint">
   <div>
     <img class="pet-cover" src="<%= pet.coverImagePath %>">
     <div class="pet-details-btn-grid">
@@ -7,7 +15,7 @@
       <%- include('../partials/deleteForm', { url: `/pets/${pet.id}` }) %>
       <a class="btn btn-primary pet-details-owner-button" href="/owners/<%= pet.owner.id %>">View Owner</a>
 		<a class="btn btn-primary" href="javascript:window.print()">Print</a>
-
+	</div>
     </div>
   </div>
   <div class="pet-details-grid">
