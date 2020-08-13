@@ -7,7 +7,7 @@
 }
 </style>
 <div class="pet-details">
-<div id="noprint">
+<p class="noprint">
   <div>
     <img class="pet-cover" src="<%= pet.coverImagePath %>">
     <div class="pet-details-btn-grid">
@@ -15,7 +15,7 @@
       <%- include('../partials/deleteForm', { url: `/pets/${pet.id}` }) %>
       <a class="btn btn-primary pet-details-owner-button" href="/owners/<%= pet.owner.id %>">View Owner</a>
 		<a class="btn btn-primary" href="javascript:window.print()">Print</a>
-	</div>
+	</p>
     </div>
   </div>
   <div class="pet-details-grid">
